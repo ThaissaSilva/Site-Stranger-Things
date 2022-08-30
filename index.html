@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
     <title>Mundo Invertido | Semana Front-end</title>
 
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
-<body class="dark-theme" aria-label="O site utiliza o tema light" role="body">
+<body class="light-theme" aria-label="O site utiliza o tema light" role="body">
 
     <header aria-label="Cabeçalho da página.">
-        <audio id="music" autoplay>
+        <audio id="music">
             <source src="/assets/musics/normal-world.mpeg">
         </audio>
         <div class="header-content">
@@ -121,26 +122,6 @@
         <img class="invert-element" src="/assets/images/footer/logo.svg" alt="Logotipo DIO">
     </footer>
 
-    <script>
-
-        window.addEventListener('click', function(){
-            const audio = document.getElementById('music');
-            audio.play();
-            audio.volume = 0.2;
-        })
-
-        function switchTheme(){
-            document.body.classList.toggle('dark-theme');
-            document.body.classList.toggle('light-theme');
-
-            const theme = document.body.classList[0];
-            const music = theme === 'light-theme' ? 'normal-world.mpeg' : 'inverted-world.mpeg'
-
-            const audio = document.getElementById('music');
-            audio.src = `/assets/musics/${music}`;
-            audio.play();
-            audio.volume = 0.2;
-        }
-    </script>
+    <script src="/assets/js/main.js" type="module"></script>
 </body>
 </html>
